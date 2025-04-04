@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #dcc8c8;
+  --foreground: #0a0a0a;
   --custom-purple: rgb(37, 0, 91); 
 }
 
@@ -13,8 +13,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #ffffff;
   }
+}
+
+/* ✅ Add this line below the body styles */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
