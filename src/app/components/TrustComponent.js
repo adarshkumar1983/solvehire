@@ -8,7 +8,7 @@ const TrustComponent = () => {
 
         {/* Title */}
         <h2 className="text-black mb-20 mt-10 text-2xl font-semibold">
-          Trusted by hiring teams of all sizes — enterprises & startups.
+        Trusted by hiring teams of all sizes, enterprises,and startups.
         </h2>
 
         {/* Trusted Companies */}
