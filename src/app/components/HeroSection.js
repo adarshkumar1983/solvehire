@@ -6,21 +6,21 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   const words = [
-    { text: "AI-Powered" },
+    { text: "India’s" },
     { text: "\u00A0" },
-    { text: "Recruitment" },
+    { text: "First" },
     { text: "\u00A0" },
-    { text: "Platform" },
+    { text: "Output" },
     { text: "\u00A0" },
-    { text: "for" },
+    { text: "Driven  " },
     { text: "\u00A0" },
     {
-      text: "TechHiring",
+      text: "AI Tech Recuiter ",
       className: "text-blue-800 dark:text-blue-500",
     },
   ];
 
-  const paragraph = `Solvehire’s AI-powered sourcing instantly delivers pre-vetted, high-intent talent. Our proprietary AI, continuously trained on 10,000+ monthly feedback inputs, helps you source, rank, and engage the best candidates—faster and more efficiently.`;
+  const paragraph = `solvehire’s AI-powered sourcing instantly delivers pre-vetted, high-intent talent, helping you source, rank, and engage the best candidates—faster and more efficiently as our proprietary AI, continuously trained on 10,000+ monthly feedback inputs.`;
 
   return (
     <div id ="home" className="flex flex-col items-center justify-center min-h-screen bg-[rgb(37,0,91)] text-white text-center p-6">
@@ -59,7 +59,7 @@ export default function HeroSection() {
           <TypewriterEffectSmooth words={words} />
         </div>
         {/* Animated Description */}
-        <div className=" md:text-sm mb-8 max-w-2xl mx-auto text-white">
+        <div className=" md:text-sm mb-8 max-w-xl mx-auto text-white">
           <TextGenerateEffect words={paragraph} />
         </div>
 

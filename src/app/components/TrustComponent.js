@@ -24,17 +24,19 @@ const TrustComponent = () => {
               key={index}
               src={company.src}
               alt={company.alt || "Trusted company"}
-              width={150}
+              width={1500}
               height={64}
-              className="h-16 w-auto"
+              className="h-13 w-auto"
               priority
             />
           ))}
         </div>
 
         {/* Backed By */}
-        <div className="text-black text-3xl font-semibold mt-6">
+        <div className="text-black text-2xl font-semibold mt-6">
+          <br></br>
           <p className="mb-2">Backed by</p>
+          <br></br>
         </div>
 
         {/* Investors / Partners */}

@@ -32,7 +32,7 @@ const ContainerSecondary = () => {
           <img
             src="/image1.jpg"
             alt="Team Collaboration"
-            className="rounded-lg shadow-lg w-full object-cover"
+            className="rounded-lg shadow-lg h-90 w-190 object-cover"
           />
         </motion.div>
         <motion.div
@@ -72,7 +72,7 @@ const ContainerSecondary = () => {
           <img
             src="/image2.png"
             alt="Scalable Outreach"
-            className="rounded-lg w-full object-cover"
+            className="rounded-lg w-120 object-cover"
           />
         </motion.div>
         <motion.div
@@ -95,9 +95,9 @@ const ContainerSecondary = () => {
             our platform ensures a smooth and positive candidate journey.
           </p>
           <ul className="list-disc pl-6 font-bold text-black">
-            <li>Chatgpt Generated Personalized Mails ✔️</li>
+            <li>GenAI generating personalized real-time messages ✔️</li>
             <li>AI  Campaigning ✔️</li>
-            <li>AI Chatbot Screening ✔️</li>
+            <li>AI conversational streaming ✔️</li>
           </ul>
         </motion.div>
       </div>
@@ -114,7 +114,7 @@ const ContainerSecondary = () => {
           <img
             src="/image3.png"
             alt="Data Insights"
-            className="rounded-lg w-full object-cover"
+            className="rounded-lg w-120  object-cover"
           />
         </motion.div>
         <motion.div

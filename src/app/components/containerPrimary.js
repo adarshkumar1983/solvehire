@@ -152,7 +152,7 @@ const ContainerPrimary = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-4xl w-full">
 
           {/* Left Side - Images */}
-          <div className="grid grid-cols-2 gap-6 mb-6 w-full max-w-xs md:max-w-md">
+          <div className="grid grid-cols-2 gap-10 mb-6 w-80 max-w-xs md:max-w-md">
             <Image
               src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
               alt="GitHub Logo"

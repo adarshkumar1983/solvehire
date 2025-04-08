@@ -6,34 +6,24 @@ import { motion } from "framer-motion";
 const ComparisonTable = () => {
   const data = [
     {
-      label: "Candidate Email & Phone Number",
-      linkedin: "Limited access",
-      agencies: "45% accuracy, not updated",
-      solvehire: "✔ 80%+ accurate data",
+      label: "Sourcing Platforms",
+      manual: "Majorly LinkedIn & Naukri",
+      ai: "Sourcing from 20+ database platforms",
     },
     {
-      label: "Response Rate (AI Campaigns)",
-      linkedin: "Manual InMail process",
-      agencies: "Manual mass campaigns",
-      solvehire: "✔ 2x better than manual",
+      label: "Keywords / Filters",
+      manual: "Manual Boolean Searches",
+      ai: "AI Job Enrichment & AI-Generated Keywords",
     },
     {
-      label: "AI Chatbot Screening",
-      linkedin: "❌ No automation",
-      agencies: "❌ No automation",
-      solvehire: "✔ AI-driven chat screening",
+      label: "Screening",
+      manual: "Manual Resume Screening",
+      ai: "Advanced AI-Matchmaking",
     },
     {
-      label: "AI Matchmaking & Ranking",
-      linkedin: "❌ No ranking",
-      agencies: "❌ No ranking",
-      solvehire: "✔ Highly accurate matching",
-    },
-    {
-      label: "Integration & Syncing",
-      linkedin: "❌ No integrations",
-      agencies: "❌ No integrations",
-      solvehire: "✔ Fully synced",
+      label: "Response Rate",
+      manual: "Slow + Monotonous",
+      ai: "5x Faster & Personalized",
     },
   ];
 
@@ -67,10 +57,10 @@ const ComparisonTable = () => {
         <table className="w-full">
           <thead>
             <tr className="text-gray-800 text-lg font-semibold">
-              <th className="p-6 text-left">Features</th>
-              <th className="p-6 text-left">LinkedIn/Naukri</th>
-              <th className="p-6 text-left">Recruiting Agencies</th>
-              <th className="p-6 text-center flex items-center justify-center">
+              <th className="p-6 text-left">Feature</th>
+              <th className="p-6 text-left">Manual Recruitment</th>
+              <th className="p-6 text-left">AI Recruitment</th>
+              {/* <th className="p-6 text-center flex items-center justify-center">
                 <Image
                   src="/solvehireai_logo_black.png"
                   alt="SolveHire Logo"
@@ -78,7 +68,7 @@ const ComparisonTable = () => {
                   height={50}
                   className="ml-2"
                 />
-              </th>
+              </th> */}
             </tr>
           </thead>
           <tbody className="text-gray-700 text-lg">
@@ -93,9 +83,8 @@ const ComparisonTable = () => {
                 className={index % 2 === 0 ? "bg-gray-100" : "bg-white"}
               >
                 <td className="p-6 font-semibold text-gray-900">{row.label}</td>
-                <td className="p-6">{row.linkedin}</td>
-                <td className="p-6">{row.agencies}</td>
-                <td className="p-6 text-blue-600 font-semibold">{row.solvehire}</td>
+                <td className="p-6">{row.manual}</td>
+                <td className="p-6 text-blue-600 font-semibold">{row.ai}</td>
               </motion.tr>
             ))}
           </tbody>
