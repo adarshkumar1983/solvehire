@@ -7,7 +7,7 @@ export default function SignupPage() {
       <Head>
         <title>Signup Page</title>
       </Head>
-      
+
       <div className="w-full max-w-lg p-8 bg-[rgb(37,0,91)] rounded-lg shadow-lg flex flex-col items-center">
         <div className="flex flex-col sm:flex-row justify-center items-center mb-8">
           <div className="relative flex">
@@ -30,9 +30,9 @@ export default function SignupPage() {
             + Trusted by over 500+ users
           </span>
         </div>
-        
+
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
-        Sign up to start{' '}
+          Sign up to start{' '}
           <span
             className="relative inline-block text-white"
             style={{
@@ -43,15 +43,15 @@ export default function SignupPage() {
               padding: "2px 8px"
             }}
           >
-         sourcing
+            sourcing
           </span>
         </h1>
-        
-        <input 
-  type="email" 
-  placeholder="Your email" 
-  className="w-full p-3 rounded-md text-white border border-white bg-transparent focus:outline-none focus:ring-1"
-/>
+
+        <input
+          type="email"
+          placeholder="Your email"
+          className="w-full p-3 rounded-md text-white border border-white bg-transparent focus:outline-none focus:ring-1"
+        />
 
         <button className="mt-4 w-full text-black bg-white bg-[rgb(37,0,91)] rounded-md py-3 px-6 hover:bg-purple-200 transition duration-300">
           Sign up

@@ -8,7 +8,7 @@ const TrustComponent = () => {
 
         {/* Title */}
         <h2 className="text-black mb-20 mt-10 text-2xl font-semibold">
-        Trusted by hiring teams of all sizes, enterprises,and startups.
+          Trusted by hiring teams of all sizes, enterprises,and startups.
         </h2>
 
         {/* Trusted Companies */}
@@ -20,12 +20,12 @@ const TrustComponent = () => {
             { src: "/pocketfm.png", alt: "Pocket FM" },
             { src: "/zopper.png", alt: "Zopper" }
           ].map((company, index) => (
-            <Image 
-              key={index} 
-              src={company.src} 
-              alt={company.alt || "Trusted company"} 
-              width={150} 
-              height={64} 
+            <Image
+              key={index}
+              src={company.src}
+              alt={company.alt || "Trusted company"}
+              width={150}
+              height={64}
               className="h-16 w-auto"
               priority
             />
@@ -46,11 +46,11 @@ const TrustComponent = () => {
               { src: "/zomato.png", alt: "Zomato" }
             ].map((investor, index) => (
               <div key={index} className="flex flex-col items-center">
-                <Image 
-                  src={investor.src} 
-                  alt={investor.alt || "Investor logo"} 
-                  width={150} 
-                  height={64} 
+                <Image
+                  src={investor.src}
+                  alt={investor.alt || "Investor logo"}
+                  width={150}
+                  height={64}
                   className="h-16 w-auto"
                   priority
                 />

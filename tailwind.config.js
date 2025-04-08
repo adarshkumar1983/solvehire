@@ -13,6 +13,7 @@ module.exports = {
             500: "rgb(37, 0, 91)",    // Optional: define shades
           },
         },
+        
       },
     },
     plugins: [],

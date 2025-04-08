@@ -10,11 +10,11 @@ const Footer = () => {
                 {/* Company Info */}
                 <div className="text-left mb-8">
                     <h1 className="text-3xl font-bold">
-                    
-                         <Image src="/solvehireai_logo_black.png" alt="Logo" width={120} height={40}  />
+
+                        <Image src="/solvehireai_logo_black.png" alt="Logo" width={120} height={40} />
                     </h1>
                     <p className="mt-2">
-                        We ensure you connect with the right talent faster, more efficiently, 
+                        We ensure you connect with the right talent faster, more efficiently,
                         and with greater success than ever before.
                     </p>
                 </div>
@@ -39,7 +39,13 @@ const Footer = () => {
                                     </span>
                                 </Link>
                             </li>
-                            <li>Contact</li>
+                            <li>
+                                <Link href="/contact">
+                                    <span className="hover:underline cursor-pointer">
+                                        Contact
+                                    </span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 

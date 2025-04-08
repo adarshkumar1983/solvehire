@@ -11,6 +11,7 @@ import ComparisonTable from "./components/ComparisonTable";
 import TestimonialSlider from "./components/TestimonialSlider";
 import FaqAccordion from "./components/FaqAccordion";
 import SignupPage from "./components/SignupPage";
+import Features from "./components/Features"
 
 export default function Home() {
   return (
@@ -28,11 +29,13 @@ export default function Home() {
         <ContainerPrimary />
         <ContainerSecondary />
         <ContainerTertiary />
+         <Features/>
         <ComparisonTable />
         <TestimonialSlider />
         <FaqAccordion />
         <SignupPage />
         <Footer />
+    
       </div>
     </>
   );
