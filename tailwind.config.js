@@ -3,7 +3,12 @@ module.exports = {
     content: [
       "./pages/**/*.{js,ts,jsx,tsx}",
       "./components/**/*.{js,ts,jsx,tsx}",
-      "./app/**/*.{js,ts,jsx,tsx}" // If using Next.js App Router
+      "./app/**/*.{js,ts,jsx,tsx}" ,// If using Next.js App Router
+      "./public/**/*.html",    
+    ],
+    safelist: [
+      'bg-customPurple',
+      'bg-customPurple-500'
     ],
     theme: {
       extend: {

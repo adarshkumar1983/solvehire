@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
         <section className="mb-6">
           <h2 className="text-xl font-semibold mb-2">1. Introduction</h2>
           <p>Welcome to solvehire ai.</p>
-          <p>solvehire ai ("Company", "we", "us", or "our") operates the website     <a
+          <p>solvehire ai ("Company"&apos; "we"&apos; "us", or "our") operates the website     <a
             href="https://www.solvehire.ai"
             target="_blank"
             rel="noopener noreferrer"

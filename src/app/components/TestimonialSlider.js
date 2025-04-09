@@ -35,7 +35,7 @@ const TestimonialSlider = () => {
 
   return (
     <div id="testimonials" className="flex items-center justify-center bg-gray-50 px-4 py-8 scroll-mt-20">
-      <div className="container mx-auto mt-10 flex flex-col md:flex-row items-center justify-between max-w-4xl gap-4">
+      <div className="container mx-auto mt-10 mb-20 flex flex-col md:flex-row items-center justify-between max-w-4xl gap-4">
         {/* Left Button (Hidden on Small Screens) */}
         <button
           onClick={prevTestimonial}

@@ -37,13 +37,13 @@ const FaqAccordion = () => {
 
   return (
     <div id="F&Q" className="min-h-screen bg-[rgb(37,0,91)] text-black flex items-center">
-      <div className="container mx-auto mt-4 px-6 py-12 max-w-4xl">
-        <h2 className="text-3xl font-bold mb-6 text-white text-center">Frequently Asked Questions</h2>
+      <div className="container mx-auto mt-4 px-6 py-12 max-w-7xl">
+        <h2 className="text-5xl font-bold mb-6 text-white text-center">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border border-white rounded-md overflow-hidden">
               <button
-                className="flex justify-between items-center w-full p-4 text-left bg-white focus:outline-none"
+                className="flex justify-between items-center w-full p-5 text-left bg-white focus:outline-none"
                 onClick={() => toggleAccordion(index)}
               >
                 <span className="font-semibold">{faq.question}</span>

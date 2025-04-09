@@ -20,7 +20,7 @@ export default function HeroSection() {
     },
   ];
 
-  const paragraph = `solvehire’s AI-powered sourcing instantly delivers pre-vetted, high-intent talent, helping you source, rank, and engage the best candidates—faster and more efficiently as our proprietary AI, continuously trained on 10,000+ monthly feedback inputs.`;
+  const paragraph = ` Delivers Pre-Vetted & High-intent talent from 20+ Data Sources.`;
 
   return (
     <div id ="home" className="flex flex-col items-center justify-center min-h-screen bg-[rgb(37,0,91)] text-white text-center p-6">
@@ -44,7 +44,7 @@ export default function HeroSection() {
             />
           </div>
           <span className="font-semibold mt-4 sm:mt-0 sm:ml-10 text-center sm:text-left">
-            + Trusted by  500+ users
+            + Trusted by  50+ organizations 
           </span>
         </div>
         <h1 className="block sm:hidden text-3xl font-bold mb-4">
@@ -59,7 +59,7 @@ export default function HeroSection() {
           <TypewriterEffectSmooth words={words} />
         </div>
         {/* Animated Description */}
-        <div className=" md:text-sm mb-8 max-w-xl mx-auto text-white">
+        <div className=" md:text-sm mb-8 max-w-7xl mx-auto text-white">
           <TextGenerateEffect words={paragraph} />
         </div>
 
@@ -108,9 +108,9 @@ export default function HeroSection() {
         </div>
 
         {/* Footer Text */}
-        <p className="mt-4 text-sm">
+        {/* <p className="mt-4 text-sm">
           Trusted by  <span className="font-semibold">500+ users</span>
-        </p>
+        </p> */}
       </div>
     </div>
   );

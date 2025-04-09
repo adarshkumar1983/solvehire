@@ -49,38 +49,49 @@ export default function Header() {
     };
   }, []);
 
-  // Update indicator position
   useEffect(() => {
     const activeRef = navRefs.current[activeSection];
     if (activeRef) {
-      const { offsetLeft, offsetWidth } = activeRef;
+      const { offsetLeft, offsetWidth, offsetHeight } = activeRef;
+      const extraHeight = window.innerWidth < 640 ? 0 : window.innerWidth < 1024 ? 12 : 8;
       setIndicatorStyle({
         left: offsetLeft,
         width: offsetWidth,
+        height: offsetHeight + extraHeight,
       });
     }
   }, [activeSection]);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [menuOpen]);
+
   return (
-    <header  className="bg-[rgb(37,0,91)] shadow-md fixed w-full z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 relative">
+    <header className="bg-[rgb(37,0,91)] shadow-md fixed w-full top-0 z-50">
+      <div className="container mx-auto px-4 flex items-center justify-between h-16 relative">
         <Link href="/">
           <Image
             src="/solvehireai_logo.png"
             alt="Logo"
             width={120}
             height={40}
-            className="cursor-pointer"
+            className="cursor-pointer w-24 sm:w-28 lg:w-32"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 relative">
+        <nav className="hidden md:flex space-x-4 lg:space-x-6 relative items-center">
           <div
-           className="absolute bottom-0 h-8 bg-blue-200/40 rounded-full transition-all duration-300 ease-in-out"
+            className="absolute bottom-0 bg-blue-200/40 rounded-full transition-all duration-300 ease-in-out"
             style={{
               ...indicatorStyle,
-              position: 'absolute',
+              left: `${indicatorStyle.left}px`,
+              width: `${indicatorStyle.width}px`,
+              height: `${indicatorStyle.height}px`,
             }}
           />
           {navItems.map((item) => (
@@ -88,15 +99,17 @@ export default function Header() {
               key={item.id}
               href={item.href}
               ref={(el) => (navRefs.current[item.id] = el)}
-              className="text-white px-2 pb-1 bg-transparent hover:text-blue-300 transition-colors"
+              className={`${
+                activeSection === item.id ? 'font-semibold text-blue-300' : 'text-white'
+              } px-2 pb-1 bg-transparent hover:text-blue-300 transition-colors relative text-sm lg:text-base`}
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        {/* Employer Login Button */}
-        <div className="hidden md:flex">
+      {/* Employer Login Button */}
+      <div className="hidden sm:flex">
           <Link
             href="https://app.solvehire.ai/"
             className="group relative overflow-hidden bg-blue-500 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg"
@@ -116,14 +129,18 @@ export default function Header() {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="sm:hidden text-white focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle Navigation Menu"
+        >
           {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute w-full py-4 z-40">
+        <div className="sm:hidden bg-white shadow-lg absolute w-full py-4 z-40">
           <nav className="flex flex-col items-center space-y-4">
             {navItems.map((item) => (
               <Link
@@ -137,22 +154,12 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-
             <Link
               href="https://app.solvehire.ai/"
-              className="group relative overflow-hidden bg-blue-500 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg"
+              className="group relative overflow-hidden bg-blue-500 text-white font-semibold py-2 px-0 rounded-md shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg"
               aria-label="Employer Login"
             >
-              <div className="flex items-center gap-2 justify-center">
-                <div className="h-2 w-2 rounded-full bg-white transition-transform duration-300 group-hover:scale-[100.8]" />
-                <span className="inline-block transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">
-                  Employer Login
-                </span>
-              </div>
-              <div className="absolute top-0 left-5 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 text-black opacity-0 transition-all duration-300 group-hover:-translate-x-5 group-hover:opacity-100">
-                <span>Employer Login</span>
-                <ArrowRight size={18} />
-              </div>
+              Employer Login
             </Link>
           </nav>
         </div>

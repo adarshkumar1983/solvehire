@@ -210,8 +210,8 @@ const ContainerPrimary = () => {
         </footer>
 
         {/* Value Propositions Section */}
-        <div className="w-full flex items-center justify-center mt-6">
-          <ValuePropositions />
+        <div className="w-full flex items-center justify-center mt-15">
+       <ValuePropositions />
         </div>
       </div>
     </div>

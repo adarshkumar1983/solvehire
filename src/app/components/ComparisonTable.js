@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { ColourfulText } from "./ui/colourful-text"; // Adjust the import path as needed.
 
 const ComparisonTable = () => {
   const data = [
@@ -37,8 +37,9 @@ const ComparisonTable = () => {
   };
 
   return (
-    <div id="Comparison" className="w-full bg-gray-50 py-12 scroll-mt-20 px-4 md:px-12 lg:px-20">
-      {/* Title */}
+    <div className="relative bg-gray-50  py-12 px-4 md:px-12 lg:px-20">
+      {/* Title with Wave Animation */}
+
       <motion.h1
         initial="hidden"
         whileInView="visible"
@@ -47,28 +48,26 @@ const ComparisonTable = () => {
           hidden: { opacity: 0, y: -20 },
           visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
         }}
-        className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-10 text-center"
+        className="text-4xl md:text-5xl mt-10 font-extrabold text-gray-800 mb-10 text-center"
       >
-        AI Recruiting Comparison
+       Comparison
       </motion.h1>
-
+    
       {/* Desktop View (Table) */}
       <div className="hidden md:block bg-white shadow-xl rounded-2xl p-6 md:p-10">
+        
         <table className="w-full">
+          
           <thead>
             <tr className="text-gray-800 text-lg font-semibold">
               <th className="p-6 text-left">Feature</th>
               <th className="p-6 text-left">Manual Recruitment</th>
-              <th className="p-6 text-left">AI Recruitment</th>
-              {/* <th className="p-6 text-center flex items-center justify-center">
-                <Image
-                  src="/solvehireai_logo_black.png"
-                  alt="SolveHire Logo"
-                  width={100}
-                  height={50}
-                  className="ml-2"
-                />
-              </th> */}
+              <th className="p-6 text-left">
+              <h1>
+          <ColourfulText text="AI Recruitment " />
+  
+</h1>
+                </th>
             </tr>
           </thead>
           <tbody className="text-gray-700 text-lg">
@@ -106,13 +105,10 @@ const ComparisonTable = () => {
             <h2 className="text-xl font-bold text-gray-800">{row.label}</h2>
             <div className="mt-4 space-y-2">
               <p className="text-gray-700">
-                <strong>LinkedIn/Naukri:</strong> {row.linkedin}
+                <strong>Manual:</strong> {row.manual}
               </p>
               <p className="text-gray-700">
-                <strong>Recruiting Agencies:</strong> {row.agencies}
-              </p>
-              <p className="text-gray-700">
-                <strong className="text-green-600">SolveHire AI:</strong> {row.solvehire}
+                <strong className="text-blue-600">AI:</strong> {row.ai}
               </p>
             </div>
           </motion.div>

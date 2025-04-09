@@ -65,9 +65,9 @@ export default function JobSourcing() {
             <p className="max-w-xl">
               No manual filtering, just high-quality talent ranked by relevance for you to select or reject in a single click. Ready to download and move to your ATS.
             </p>
-            <h2 className="text-4xl font-bold">Step 3: Start Hiring</h2>
+            <h2 className="text-4xl font-bold">Step 3: Start Campaigning</h2>
             <p className="max-w-sm">
-              Engage with top talent with our automated mail sequencing and make data-driven hiring decisions fast, only with high-intent candidates.
+              Engage with top talent with our automated Whatsapp Sequencing and make data-driven hiring decisions fast, only with high-intent candidates.
             </p>
           </div>
 
