@@ -36,7 +36,7 @@ const TestimonialSlider = () => {
   return (
     <div id="testimonials" className="flex items-center justify-center bg-gray-50 px-4 py-8 scroll-mt-20">
       <div className="container mx-auto mt-10 mb-20 flex flex-col md:flex-row items-center justify-between max-w-4xl gap-4">
-        {/* Left Button (Hidden on Small Screens) */}
+       
         <button
           onClick={prevTestimonial}
           className="hidden md:block bg-gray-300 p-4 rounded-full shadow-md hover:bg-gray-400 transition"
@@ -44,7 +44,7 @@ const TestimonialSlider = () => {
           &#9664;
         </button>
 
-        {/* Testimonial Content */}
+       
         <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg text-center w-full max-w-lg flex flex-col items-center border border-gray-200">
           <Image
             src={testimonials[currentIndex].companyLogo}
@@ -66,7 +66,7 @@ const TestimonialSlider = () => {
           />
         </div>
 
-        {/* Right Button (Hidden on Small Screens) */}
+
         <button
           onClick={nextTestimonial}
           className="hidden md:block bg-gray-300 p-4 rounded-full shadow-md hover:bg-gray-400 transition"
@@ -74,7 +74,7 @@ const TestimonialSlider = () => {
           &#9654;
         </button>
 
-        {/* Mobile Buttons - Shown only on small screens */}
+      
         <div className="flex justify-between w-full max-w-lg mt-4 md:hidden">
           <button
             onClick={prevTestimonial}

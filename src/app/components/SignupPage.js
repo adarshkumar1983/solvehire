@@ -104,7 +104,7 @@ export default function SignupPage() {
           <button
             type="submit"
             disabled={loading}
-            className="mt-4 w-full text-black bg-white bg-[rgb(37,0,91)] rounded-md py-3 px-6 hover:bg-purple-200 transition duration-300"
+            className="mt-4 w-full text-black bg-[rgb(37,0,91)] rounded-md py-3 px-6 hover:bg-purple-200 transition duration-300"
           >
             {loading ? 'Signing up...' : 'Sign up'}
           </button>
