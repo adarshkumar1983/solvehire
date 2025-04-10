@@ -6,15 +6,15 @@ const testimonials = [
   {
     text: "Hiring at lajbclaslscale just got smarter with SolveHire AI. Faster, accurate sourcing without the manual hassle!",
     author: "Lalit Agrawal - CTO",
-    imageUrl: "/emoji_male.png", // Replace with actual image path
-    companyLogo: "/zomato.webp", // Replace with actual logo path
+    imageUrl: "/emoji_male.png",
+    companyLogo: "/zomato.webp", 
 
   },
   {
     text: "Hiring at scale just got smarter with SolveHire AI. Faster, accurate sourcing without the manual hassle!",
     author: "Lalit Agrawal - CTO",
-    imageUrl: "/emoji_male.png", // Replace with actual image path
-    companyLogo: "/zomato.webp", // Replace with actual logo path
+    imageUrl: "/emoji_male.png",
+    companyLogo: "/zomato.webp", 
   },
 
 

@@ -7,9 +7,9 @@ export default function JobSourcing() {
     <div id="how-to-source" className="bg-[rgb(37,0,91)] text-white py-20 scroll-mt-10">
       <div className="container mx-auto px-6 md:px-12 space-y-24">
 
-        {/* Section 1 */}
+
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          {/* Text */}
+
           <div className="md:w-1/2 space-y-4">
             <h1 className="text-5xl font-bold">Okay! How do we start sourcing here?</h1>
             <h2 className="text-2xl font-semibold">Step 1: Upload your Job Description</h2>
@@ -59,7 +59,7 @@ export default function JobSourcing() {
 
         {/* Section 2 */}
         <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-10">
-          {/* Text */}
+
           <div className="md:w-1/2 space-y-4">
             <h1 className="text-4xl font-bold">Step 2: Get AI-Screened Candidates</h1>
             <p className="max-w-xl">
@@ -71,7 +71,7 @@ export default function JobSourcing() {
             </p>
           </div>
 
-          {/* Image */}
+
           <div className="md:w-1/2 flex justify-center">
             <div className="w-full max-w-[500px] bg-amber-50 flex items-center justify-center rounded-lg shadow-lg overflow-hidden">
               <Image

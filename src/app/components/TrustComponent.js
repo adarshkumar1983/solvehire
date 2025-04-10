@@ -6,12 +6,12 @@ const TrustComponent = () => {
     <section id="why-solvehire" className="bg-blue-50 scroll-mt-20 py-10">
       <div className="container mx-auto px-4 text-center">
 
-        {/* Title */}
+
         <h2 className="text-black mb-20 mt-10 text-2xl font-semibold">
           Trusted by hiring teams of all sizes, enterprises,and startups.
         </h2>
 
-        {/* Trusted Companies */}
+
         <div className="flex flex-wrap  justify-center gap-10 mb-10 mt-10">
           {[
             { src: "/coindcx.png", alt: "CoinDCX" },
@@ -32,16 +32,16 @@ const TrustComponent = () => {
           ))}
         </div>
 
-        {/* Backed By */}
+
         <div className="text-black text-2xl font-semibold mt-6">
           <br></br>
           <p className="mb-2">Backed by</p>
           <br></br>
         </div>
 
-        {/* Investors / Partners */}
+
         <div className="flex flex-col items-center gap-6 mb-10 mt-6">
-          {/* Logos */}
+
           <div className="flex flex-wrap justify-center gap-20">
             {[
               { src: "/upekkha.png", alt: "upekṣhā" },
@@ -56,7 +56,7 @@ const TrustComponent = () => {
                   className="h-16 w-auto"
                   priority
                 />
-                {/* Add Text Below Upekha and Zomato */}
+ 
                 {investor.alt === "upekṣhā" && (
                   <p className="font-semibold text-black mt-2">(Leading SaaS Accelerator)</p>
                 )}

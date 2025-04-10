@@ -128,7 +128,7 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Toggle buttom */}
         <button
           className="sm:hidden text-white focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -138,7 +138,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/*// Mobile Menu */}
+      {/*// Mobile Menu views */}
       {menuOpen && (
         <div className="sm:hidden bg-white shadow-lg absolute w-full py-4 z-40">
           <nav className="flex flex-col items-center space-y-4">
