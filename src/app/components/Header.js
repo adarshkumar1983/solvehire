@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
 const navItems = [
-  { id: 'home', label: 'Home', href: '#home' },
+  { id: 'home', label: 'Home', href: '/' },
   { id: 'why-solvehire', label: 'Why SolveHire', href: '#why-solvehire' },
   { id: 'solutions', label: 'Solutions', href: '#solutions' },
   { id: 'how-to-source', label: 'How to Source', href: '#how-to-source' },
@@ -72,7 +72,7 @@ export default function Header() {
 
   return (
     <header className="bg-[rgb(37,0,91)] shadow-md fixed w-full top-0 z-50">
-      <div className="container mx-auto px-4 flex items-center justify-between h-16 relative">
+      <div className="container mx-auto px-4 flex items-center justify-between gap-4 h-16 relative">
         <Link href="/">
           <Image
             src="/solvehireai_logo.png"
@@ -84,7 +84,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-4 lg:space-x-6 relative items-center">
+        <nav className="hidden md:flex md:space-x-4 lg:space-x-5 xl:space-x-6 relative items-center">
           <div
             className="absolute bottom-0 bg-blue-200/40 rounded-full transition-all duration-300 ease-in-out"
             style={{
