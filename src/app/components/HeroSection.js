@@ -48,11 +48,11 @@ export default function HeroSection() {
           </span>
         </div>
         <h1 className="block sm:hidden text-3xl font-bold mb-4">
-          AI-Powered Recruitment Platform for{" "}
-          <span className="text-blue-500">TechHiring</span>
+        India’s First Output Driven{" "}
+          <span className="text-blue-500">AI Tech Recuiter</span>
         </h1>
      
-        <div className="hidden sm:flex flex-col items-center justify-center mb-6">
+        <div className="hidden md:flex flex-col items-center justify-center mb-6">
 
           <TypewriterEffectSmooth words={words} />
         </div>

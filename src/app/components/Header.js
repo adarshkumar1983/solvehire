@@ -10,7 +10,7 @@ const navItems = [
   { id: 'why-solvehire', label: 'Why SolveHire', href: '#why-solvehire' },
   { id: 'solutions', label: 'Solutions', href: '#solutions' },
   { id: 'how-to-source', label: 'How to Source', href: '#how-to-source' },
-  { id: 'testimonials', label: 'Testimonials', href: '#testimonials' },
+
 ];
 
 export default function Header() {
@@ -53,7 +53,7 @@ export default function Header() {
     const activeRef = navRefs.current[activeSection];
     if (activeRef) {
       const { offsetLeft, offsetWidth, offsetHeight } = activeRef;
-      const extraHeight = window.innerWidth < 640 ? 0 : window.innerWidth < 1024 ? 12 : 8;
+      const extraHeight = window.innerWidth < 640 ? 0 : window.innerWidth < 1024 ? 12 : 5;
       setIndicatorStyle({
         left: offsetLeft,
         width: offsetWidth,
@@ -70,6 +70,14 @@ export default function Header() {
     }
   }, [menuOpen]);
 
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    setMenuOpen(false); // Close the menu if it's mobile
+  };
+  
   return (
     <header className="bg-[rgb(37,0,91)] shadow-md fixed w-full top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between gap-4 h-16 relative">
@@ -94,19 +102,19 @@ export default function Header() {
               height: `${indicatorStyle.height}px`,
             }}
           />
-          {navItems.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              ref={(el) => (navRefs.current[item.id] = el)}
-              className={`${
-                activeSection === item.id ? 'font-semibold text-blue-300' : 'text-white'
-              } px-2 pb-1 bg-transparent hover:text-blue-300 transition-colors relative text-sm lg:text-base`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+           {navItems.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => handleScroll(item.id)}
+            ref={(el) => (navRefs.current[item.id] = el)}
+            className={`${
+              activeSection === item.id ? 'font-semibold text-blue-300' : 'text-white'
+            } px-2 pb-1 bg-transparent hover:text-blue-300 transition-colors relative text-sm lg:text-base`}
+          >
+            {item.label}
+          </button>
+        ))}
+      </nav>
 
       {/* Employer Login Button */}
       <div className="hidden sm:flex">
@@ -130,17 +138,17 @@ export default function Header() {
 
         {/* Mobile Toggle buttom */}
         <button
-          className="sm:hidden text-white focus:outline-none"
+          className="md:hidden text-white focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Navigation Menu"
         >
-          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {menuOpen ? <X className="w-7 h-7" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/*// Mobile Menu views */}
       {menuOpen && (
-        <div className="sm:hidden bg-white shadow-lg absolute w-full py-4 z-40">
+        <div className="md:hidden bg-white shadow-lg absolute w-full py-4 z-40">
           <nav className="flex flex-col items-center space-y-4">
             {navItems.map((item) => (
               <Link
@@ -156,7 +164,7 @@ export default function Header() {
             ))}
             <Link
               href="https://app.solvehire.ai/"
-              className="group relative overflow-hidden bg-blue-500 text-white font-semibold py-2 px-0 rounded-md shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg"
+              className="group relative  px-10 overflow-hidden bg-blue-500 text-white font-semibold py-2 rounded-md shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg"
               aria-label="Employer Login"
             >
               Employer Login

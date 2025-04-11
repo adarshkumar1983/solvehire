@@ -8,7 +8,7 @@ import ContainerPrimary from "./components/containerPrimary";
 import ContainerSecondary from "./components/containerSecondry";
 import ContainerTertiary from "./components/containerTertiary";
 import ComparisonTable from "./components/ComparisonTable";
-import TestimonialSlider from "./components/TestimonialSlider";
+// import TestimonialSlider from "./components/TestimonialSlider";
 import FaqAccordion from "./components/FaqAccordion";
 import SignupPage from "./components/SignupPage";
 import Features from "./components/Features"
@@ -31,7 +31,7 @@ export default function Home() {
         <ContainerTertiary />
          <Features/>
         <ComparisonTable />
-        <TestimonialSlider />
+        {/* <TestimonialSlider /> */}
         <FaqAccordion />
         <SignupPage />
         <Footer />

@@ -34,7 +34,7 @@ const ContactPage = () => {
         setMessage('');
 
         try {
-            const response = await fetch('https://app.solvehire.ai/public/contact-us', {
+            const response = await fetch('https://app.intellohire.com/public/contact-us-sh', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -29,7 +29,7 @@ const TermsOfService = () => {
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">‍1. Acceptance of Terms</h2>
-        <p>By accessing and using the solvehire ai website (https://www.solvehire.ai), you agree to comply with and be bound by these Terms of Service and all applicable laws and regulations. If you disagree with any part of these terms, you are prohibited from using or accessing this site.</p>
+        <p>By accessing and using the solvehire ai website (s://www.solvehire.ai), you agree to comply with and be bound by these Terms of Service and all applicable laws and regulations. If you disagree with any part of these terms, you are prohibited from using or accessing this site.</p>
       </section>
 
       <section className="py-6 mb-12">

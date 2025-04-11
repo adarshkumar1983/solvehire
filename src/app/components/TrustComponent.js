@@ -17,7 +17,7 @@ const TrustComponent = () => {
             { src: "/coindcx.png", alt: "CoinDCX" },
             { src: "/vedantu.svg", alt: "Vedantu" },
             { src: "/zeta.png", alt: "ZETA" },
-            { src: "/pocketfm.png", alt: "Pocket FM" },
+            { src: "/pocketFm.png", alt: "Pocket FM" },
             { src: "/zopper.png", alt: "Zopper" }
           ].map((company, index) => (
             <Image
