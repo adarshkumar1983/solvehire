@@ -20,12 +20,15 @@ export default function HeroSection() {
     },
   ];
 
-  const paragraph = ` Delivers Pre-Vetted & High-intent talent from 20+ Data Sources.`;
+  const paragraph =
+    "Delivers Pre-Vetted & High-intent talent from 20+ Data Sources.";
 
   return (
-    <div id ="home" className="flex flex-col items-center justify-center min-h-screen bg-[rgb(37,0,91)] text-white text-center p-6">
-      <div  className="container mx-auto px-4">
-      
+    <header
+      id="home"
+      className="flex flex-col items-center justify-center min-h-screen bg-[rgb(37,0,91)] text-white text-center p-6"
+    >
+      <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-center items-center mt-12 mb-5">
           <div className="relative flex">
             <Image
@@ -44,51 +47,39 @@ export default function HeroSection() {
             />
           </div>
           <span className="font-semibold mt-4 sm:mt-0 sm:ml-10 text-center sm:text-left">
-            + Trusted by  50+ organizations 
+            + Trusted by 50+ organizations
           </span>
         </div>
-        <h1 className="block sm:hidden text-3xl font-bold mb-4">
-        India’s First Output Driven{" "}
-          <span className="text-blue-500">AI Tech Recuiter</span>
-        </h1>
-     
-        <div className="hidden md:flex flex-col items-center justify-center mb-6">
-
-          <TypewriterEffectSmooth words={words} />
-        </div>
-
-        <div className=" md:text-sm mb-8 max-w-7xl mx-auto text-white">
+        <h1 className="block md:hidden text-3xl font-bold mb-4">
+  India’s First Output Driven{" "}
+  <span className="text-blue-500">AI Tech Recruiter</span>
+</h1>
+<div className="hidden md:flex flex-col items-center justify-center mb-6">
+  <TypewriterEffectSmooth words={words} />
+</div>
+        <div className="md:text-sm mb-8 max-w-7xl mx-auto text-white">
           <TextGenerateEffect words={paragraph} />
         </div>
-
-
         <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-        
           <a
             href="https://app.solvehire.ai/"
-            className="group relative overflow-hidden bg-blue-500 text-white font-semibold py-2 px-6 rounded-full shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg dark:bg-blue-600 dark:hover:bg-blue-700"
+            className="group relative overflow-hidden bg-blue-500 text-white font-semibold py-2 px-6 rounded-full shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg focus-visible:ring focus-visible:ring-blue-300"
             aria-label="Get Early Access"
           >
             <div className="flex items-center gap-2 justify-center">
-   
               <div className="h-2 w-2 rounded-full bg-white transition-transform duration-300 group-hover:scale-[100.8]" />
-          
               <span className="inline-block transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">
                 Get Early Access
               </span>
             </div>
-
-            {/* buttons */}
             <div className="absolute top-0 left-5 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 text-black opacity-0 transition-all duration-300 group-hover:-translate-x-5 group-hover:opacity-100">
               <span>Get Early Access</span>
               <ArrowRight size={18} />
             </div>
           </a>
-
-
           <a
             href="https://calendly.com/ashish-intello"
-            className="group relative overflow-hidden bg-gray-800 text-white font-semibold py-2 px-6 rounded-full shadow-md transition-all duration-300 hover:bg-gray-700 hover:shadow-lg dark:bg-gray-700 dark:hover:bg-gray-600"
+            className="group relative overflow-hidden bg-gray-800 text-white font-semibold py-2 px-6 rounded-full shadow-md transition-all duration-300 hover:bg-gray-700 hover:shadow-lg focus-visible:ring focus-visible:ring-gray-400"
             aria-label="Book a Demo"
           >
             <div className="flex items-center gap-2 justify-center">
@@ -97,19 +88,13 @@ export default function HeroSection() {
                 Book a Demo
               </span>
             </div>
-
             <div className="absolute top-0 left-5 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 text-black opacity-0 transition-all duration-300 group-hover:-translate-x-5 group-hover:opacity-100">
               <span>Book a Demo</span>
               <ArrowRight size={18} />
             </div>
           </a>
         </div>
-
-        {/* Footer Text */}
-        {/* <p className="mt-4 text-sm">
-          Trusted by  <span className="font-semibold">500+ users</span>
-        </p> */}
       </div>
-    </div>
+    </header>
   );
 }

@@ -3,6 +3,12 @@ import Link from "next/link";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Image from "next/image";
 const Footer = () => {
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <footer className="bg-white text-gray-700 py-8">
             <div className="container mx-auto px-4">
@@ -54,18 +60,20 @@ const Footer = () => {
                         <h3 className="font-semibold mb-2">Pages</h3>
                         <ul className="space-y-1">
                             <li>
-                                <Link href="#Comparison">
-                                    <span className="hover:underline cursor-pointer">
-                                        Comparison
-                                    </span>
-                                </Link>
+                                <button
+                                    onClick={() => scrollToSection("Comparison")}
+                                    className="hover:underline cursor-pointer text-left"
+                                >
+                                    Comparison
+                                </button>
                             </li>
                             <li>
-                                <Link href="#F&Q">
-                                    <span className="hover:underline cursor-pointer">
-                                        F&Q
-                                    </span>
-                                </Link>
+                                <button
+                                    onClick={() => scrollToSection("F&Q")}
+                                    className="hover:underline cursor-pointer text-left"
+                                >
+                                    F&Q
+                                </button>
                             </li>
                             <li>
                                 <Link href="https://app.solvehire.ai">

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X, ArrowRight } from 'lucide-react';
-
+import { useRouter } from 'next/navigation';
 const navItems = [
   { id: 'home', label: 'Home', href: '/' },
   { id: 'why-solvehire', label: 'Why SolveHire', href: '#why-solvehire' },
@@ -18,6 +18,7 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState('home');
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const navRefs = useRef({});
+  const router = useRouter();
 
   useEffect(() => {
     const sectionIds = navItems.map((item) => item.id);
@@ -53,7 +54,7 @@ export default function Header() {
     const activeRef = navRefs.current[activeSection];
     if (activeRef) {
       const { offsetLeft, offsetWidth, offsetHeight } = activeRef;
-      const extraHeight = window.innerWidth < 640 ? 0 : window.innerWidth < 1024 ? 12 : 5;
+      const extraHeight = window.innerWidth < 640 ? 0 : window.innerWidth < 1024 ? 6 : 5;
       setIndicatorStyle({
         left: offsetLeft,
         width: offsetWidth,
@@ -71,9 +72,13 @@ export default function Header() {
   }, [menuOpen]);
 
   const handleScroll = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (id === 'home') {
+      router.push('/'); // Redirect to the home page, even if already on home
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
     setMenuOpen(false); // Close the menu if it's mobile
   };
@@ -86,8 +91,8 @@ export default function Header() {
             src="/solvehireai_logo.png"
             alt="Logo"
             width={120}
-            height={40}
-            className="cursor-pointer w-24 sm:w-28 lg:w-32"
+            height={120}
+            className="cursor-pointer mb-2 justify-center items-center w-24 sm:w-28 lg:w-32"
           />
         </Link>
 
@@ -109,7 +114,7 @@ export default function Header() {
             ref={(el) => (navRefs.current[item.id] = el)}
             className={`${
               activeSection === item.id ? 'font-semibold text-blue-300' : 'text-white'
-            } px-2 pb-1 bg-transparent hover:text-blue-300 transition-colors relative text-sm lg:text-base`}
+            } px-2 pb-1 bg-transparent hover:text-blue-300 transition-colors justify-center items-center relative text-sm lg:text-base cursor-pointer`}
           >
             {item.label}
           </button>
@@ -117,7 +122,7 @@ export default function Header() {
       </nav>
 
       {/* Employer Login Button */}
-      <div className="hidden sm:flex">
+      <div className="hidden md:flex">
           <Link
             href="https://app.solvehire.ai/"
             className="group relative overflow-hidden bg-blue-500 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-lg"

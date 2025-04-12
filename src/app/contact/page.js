@@ -7,11 +7,7 @@ import Footer from '../components/Footer';
 import FaqAccordion from '../components/FaqAccordion';
 
 const ContactPage = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        company_name: '',
-    });
+    const [formData, setFormData] = useState({ name: '', email: '', company_name: '' });
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
 
@@ -20,42 +16,45 @@ const ContactPage = () => {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
+    const validateForm = () => {
+        const { name, email } = formData;
+        if (!name || !email) {
+            setMessage('Please fill out all required fields.');
+            return false;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            setMessage('Please enter a valid email address.');
+            return false;
+        }
+        return true;
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const { name, email, company_name } = formData;
-
-        if (!name || !email) {
-            setMessage('Please fill out all required fields.');
-            return;
-        }
+        if (!validateForm()) return;
 
         setLoading(true);
         setMessage('');
 
         try {
-            const response = await fetch('https://app.intellohire.com/public/contact-us-sh', {
+            const response = await fetch('/api/public/contact-solvehire', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    contact: {
-                        name,
-                        company_name,
-                        email,
-                    },
-                }),
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ contact: formData }),
             });
 
             if (response.ok) {
                 setMessage('Your message has been sent successfully!');
                 setFormData({ name: '', email: '', company_name: '' });
             } else {
-                setMessage('Failed to send your message. Please try again later.');
+                const errorData = await response.json();
+                setMessage(errorData?.message || 'Failed to send your message. Please try again later.');
             }
         } catch (error) {
-            setMessage('An error occurred. Please check your connection and try again.');
+            console.error('Error sending message:', error);
+            setMessage('An unexpected error occurred. Please try again later.');
         } finally {
             setLoading(false);
         }
@@ -142,7 +141,10 @@ const ContactPage = () => {
                             {loading ? 'Submitting...' : 'Submit'}
                         </button>
                         {message && (
-                            <p className="mt-4 text-sm text-center text-gray-700">
+                            <p
+                                className={`mt-4 text-sm text-center ${message.includes('successfully') ? 'text-green-600' : 'text-red-600'
+                                    }`}
+                            >
                                 {message}
                             </p>
                         )}

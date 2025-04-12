@@ -37,7 +37,7 @@ const ComparisonTable = () => {
   };
 
   return (
-    <div className="relative bg-gray-50  py-12 px-4 md:px-12 lg:px-20">
+    <div id="Comparison" className="relative min-h-screen flex flex-col bg-gray-50  py-12 px-4 md:px-12 lg:px-20 ">
       {/* Title with Wave Animation */}
 
       <motion.h1
@@ -48,13 +48,13 @@ const ComparisonTable = () => {
           hidden: { opacity: 0, y: -20 },
           visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
         }}
-        className="text-4xl md:text-5xl mt-10 font-extrabold text-gray-800 mb-10 text-center"
+        className="text-4xl md:text-5xl mt-10  font-extrabold text-gray-800 mb-10 text-center"
       >
        Comparison
       </motion.h1>
     
       {/* Desktop View (Table) */}
-      <div className="hidden md:block bg-white shadow-xl rounded-2xl p-6 md:p-10">
+      <div className="hidden md:block bg-white shadow-xl mb- rounded-2xl p-6 md:p-10">
         
         <table className="w-full">
           
@@ -70,7 +70,7 @@ const ComparisonTable = () => {
                 </th>
             </tr>
           </thead>
-          <tbody className="text-gray-700 text-lg">
+          <tbody className="text-gray-700 text-lg ">
             {data.map((row, index) => (
               <motion.tr
                 key={index}
