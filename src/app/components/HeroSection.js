@@ -15,7 +15,7 @@ export default function HeroSection() {
     { text: "Driven  " },
     { text: "\u00A0" },
     {
-      text: "AI Tech Recuiter ",
+      text: "AI Tech  Recruiter ",
       className: "text-blue-800 dark:text-blue-500",
     },
   ];
